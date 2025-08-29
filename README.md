@@ -1,70 +1,39 @@
-# React + TypeScript + Vite
+# React Web App (Figma + shadcn/ui + Zustand)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a responsive React web app built strictly following the provided [Figma design](https://www.figma.com/design/05pOh0OMulkdMN9Zp2DQbp/Tap-Task?node-id=2-10035&t=CAMUNqTgGYKoOqYC-0).  
+It demonstrates modern frontend practices with **TailwindCSS**, **shadcn/ui**, and **Zustand** for state management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Dashboard Page**
+  - Fetches leads data from a public API.
+  - Responsive table/grid layout.
+  - Search and filter functionality.
+  - Clean mock “CRM-style” data mapping.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **UI/UX**
+  - Components styled with `shadcn/ui` + Tailwind.
+  - Pixel-perfect alignment with the Figma design.
+  - Fully responsive (desktop, tablet, mobile).
+  - Smooth navbar behavior for small screens.
+  - Loading states, empty states, and interactive feedback.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **State Management**
+  - Global state handled with Zustand for simplicity and scalability.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [React 19](https://react.dev/)  
+- [Vite](https://vitejs.dev/) (fast dev build tool)  
+- [TailwindCSS](https://tailwindcss.com/)  
+- [shadcn/ui](https://ui.shadcn.com/)  
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)  
+- [TypeScript](https://www.typescriptlang.org/)  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# Figma_Task
+
